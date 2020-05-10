@@ -4,15 +4,12 @@
 document.getElementById('submit').addEventListener("click", bmiCalculator);
   function bmiCalculator(){
     //parse string, return integer (parseInt) on cm input
-    let cm = parseInt(document.getElementById('cm').value);
+    let inches = parseInt(document.getElementById('in').value);
     //parse string, return floating point number on kg input
-    let kg = parseFloat(document.getElementById('kg').value);
+    let lbs = parseInt(document.getElementById('lbs').value);
 
-    let bmi;
-    //parse string, return floating point number
-    let newCm = parseFloat(cm/100);
-
-    bmi = kg / (newCm * newCm);
+    let insq = inches * inches;
+    let bmi = (703 * lbs)/insq;
     //convert to string with 1 decimal place
     bmi = bmi.toFixed(1);
     //set innerHTML to the result of the JS calculations
