@@ -14,4 +14,13 @@ document.getElementById('submit').addEventListener("click", bmiCalculator);
     bmi = bmi.toFixed(1);
     //set innerHTML to the result of the JS calculations
     document.getElementById('result').innerHTML = bmi;
+
+    //hightlight weight category with result
+    if(bmi < 18.6){
+      document.getElementById('underweight').style.color = "#61EF94";
+    }else if (bmi >= 18.6 && bmi <24.9){
+      document.getElementById('normal').style.color = "#FFF661";
+    }else if (bmi >= 24.9){
+      document.getElementById('overweight').style.color = "#FD5051";
+    }
   }
